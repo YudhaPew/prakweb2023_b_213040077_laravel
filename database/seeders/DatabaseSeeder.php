@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use App\Models\Category;
+use App\Models\Post;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +21,63 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        User::create([
+            'name' => 'Yudha Prasetya',
+            'email' => 'yudha@example.com',
+            'password' => bcrypt('12345')
+        ]);
+
+        User::create([
+            'name' => 'Jihyo Maula',
+            'email' => 'jihyo@example.com',
+            'password' => bcrypt('12345')
+        ]);
+
+        Category::create([
+            'name' => 'Web Programming',
+            'slug' => 'web-programming'
+        ]);
+
+        Category::create([
+            'name' => 'Personal',
+            'slug' => 'personal'
+        ]);
+
+        Post::create([
+            'title' => 'Judul Pertama',
+            'slug' => 'judul-pertama',
+            'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi voluptas dicta ea exercitationem non distinctio voluptatem obcaecati, veniam temporibus dolorum error in quae quo ut vitae,',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi voluptas dicta ea exercitationem non distinctio voluptatem obcaecati, veniam temporibus dolorum error in quae quo ut vitae, eius facere ad? Facilis molestias ex, non eos molestiae nesciunt ab mollitia doloribus, sapiente quisquam culpa? Modi numquam, dolor laborum officia velit neque praesentium doloribus quibusdam nisi rem tempora beatae expedita quam. Asperiores, veniam officiis! Magni quia excepturi cum commodi, hic culpa reprehenderit pariatur assumenda tempore saepe minima nisi enim suscipit incidunt temporibus maxime! Dolor placeat nihil quidem reiciendis ab odio totam iure repudiandae aperiam repellat, soluta at sed nesciunt rem quam iusto!',
+            'category_id' => 1,
+            'user_id' => 1
+        ]);
+
+        Post::create([
+            'title' => 'Judul Kedua',
+            'slug' => 'judul-Kedua',
+            'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi voluptas dicta ea exercitationem non distinctio voluptatem obcaecati, veniam temporibus dolorum error in quae quo ut vitae,',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi voluptas dicta ea exercitationem non distinctio voluptatem obcaecati, veniam temporibus dolorum error in quae quo ut vitae, eius facere ad? Facilis molestias ex, non eos molestiae nesciunt ab mollitia doloribus, sapiente quisquam culpa? Modi numquam, dolor laborum officia velit neque praesentium doloribus quibusdam nisi rem tempora beatae expedita quam. Asperiores, veniam officiis! Magni quia excepturi cum commodi, hic culpa reprehenderit pariatur assumenda tempore saepe minima nisi enim suscipit incidunt temporibus maxime! Dolor placeat nihil quidem reiciendis ab odio totam iure repudiandae aperiam repellat, soluta at sed nesciunt rem quam iusto!',
+            'category_id' => 1,
+            'user_id' => 1
+        ]);
+
+        Post::create([
+            'title' => 'Judul Ketiga',
+            'slug' => 'judul-Ketiga',
+            'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi voluptas dicta ea exercitationem non distinctio voluptatem obcaecati, veniam temporibus dolorum error in quae quo ut vitae,',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi voluptas dicta ea exercitationem non distinctio voluptatem obcaecati, veniam temporibus dolorum error in quae quo ut vitae, eius facere ad? Facilis molestias ex, non eos molestiae nesciunt ab mollitia doloribus, sapiente quisquam culpa? Modi numquam, dolor laborum officia velit neque praesentium doloribus quibusdam nisi rem tempora beatae expedita quam. Asperiores, veniam officiis! Magni quia excepturi cum commodi, hic culpa reprehenderit pariatur assumenda tempore saepe minima nisi enim suscipit incidunt temporibus maxime! Dolor placeat nihil quidem reiciendis ab odio totam iure repudiandae aperiam repellat, soluta at sed nesciunt rem quam iusto!',
+            'category_id' => 2,
+            'user_id' => 1
+        ]);
+
+        Post::create([
+            'title' => 'Judul Keempat',
+            'slug' => 'judul-Ke-empat',
+            'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi voluptas dicta ea exercitationem non distinctio voluptatem obcaecati, veniam temporibus dolorum error in quae quo ut vitae,',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi voluptas dicta ea exercitationem non distinctio voluptatem obcaecati, veniam temporibus dolorum error in quae quo ut vitae, eius facere ad? Facilis molestias ex, non eos molestiae nesciunt ab mollitia doloribus, sapiente quisquam culpa? Modi numquam, dolor laborum officia velit neque praesentium doloribus quibusdam nisi rem tempora beatae expedita quam. Asperiores, veniam officiis! Magni quia excepturi cum commodi, hic culpa reprehenderit pariatur assumenda tempore saepe minima nisi enim suscipit incidunt temporibus maxime! Dolor placeat nihil quidem reiciendis ab odio totam iure repudiandae aperiam repellat, soluta at sed nesciunt rem quam iusto!',
+            'category_id' => 2,
+            'user_id' => 2
+        ]);
     }
 }
