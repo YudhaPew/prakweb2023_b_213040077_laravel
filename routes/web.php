@@ -54,8 +54,10 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard',function() {
+Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->middleware('auth');
+
+Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 
 Route::resource('/dashboard/posts', DashboardPostController::class)->withTrashed()->middleware('auth');
